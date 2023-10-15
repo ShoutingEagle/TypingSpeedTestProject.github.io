@@ -6,3 +6,30 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: #9999FF;
+    max-width: 1000px;
+    margin-inline: auto;
+}
+
+.logo{
+    font-size: 30px;
+    font-family: "Black Ops One", cursive;
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px 15px 30px;
+}
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.keyboard,.user{
+    width: 40px;
+}
