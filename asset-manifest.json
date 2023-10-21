@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/TypingSpeedTestProject.github.io/static/css/main.084d9868.css",
-    "main.js": "/TypingSpeedTestProject.github.io/static/js/main.3d1110e2.js",
+    "main.css": "/TypingSpeedTestProject.github.io/static/css/main.0a587b9f.css",
+    "main.js": "/TypingSpeedTestProject.github.io/static/js/main.2f4ff930.js",
+    "static/media/reset.svg": "/TypingSpeedTestProject.github.io/static/media/reset.4a2b2fcc7651e8ae2ca8bc65cb098d03.svg",
     "static/media/user.svg": "/TypingSpeedTestProject.github.io/static/media/user.e27ed6cc375168f2b7ceef2a1e9d5e77.svg",
     "static/media/keyboard.svg": "/TypingSpeedTestProject.github.io/static/media/keyboard.3c2a8057f6f75937f5cd7971ffcbd3f8.svg",
     "index.html": "/TypingSpeedTestProject.github.io/index.html",
-    "main.084d9868.css.map": "/TypingSpeedTestProject.github.io/static/css/main.084d9868.css.map",
-    "main.3d1110e2.js.map": "/TypingSpeedTestProject.github.io/static/js/main.3d1110e2.js.map"
+    "main.0a587b9f.css.map": "/TypingSpeedTestProject.github.io/static/css/main.0a587b9f.css.map",
+    "main.2f4ff930.js.map": "/TypingSpeedTestProject.github.io/static/js/main.2f4ff930.js.map"
   },
   "entrypoints": [
-    "static/css/main.084d9868.css",
-    "static/js/main.3d1110e2.js"
+    "static/css/main.0a587b9f.css",
+    "static/js/main.2f4ff930.js"
   ]
 }
