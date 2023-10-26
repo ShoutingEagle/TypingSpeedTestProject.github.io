@@ -1,6 +1,6 @@
 import React from 'react'
-import {ReactComponent as Keyboard} from '../Assets/keyboard.svg'
-import {ReactComponent as User} from '../Assets/user.svg'
+import {ReactComponent as Keyboard} from '../../Assets/keyboard.svg'
+import {ReactComponent as User} from '../../Assets/user.svg'
 
 
 function Navbar() {
@@ -13,7 +13,6 @@ function Navbar() {
         <div className='navbar-left'>
             <User/>
         </div>
-
     </div>
   )
 }
