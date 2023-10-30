@@ -16,15 +16,15 @@ function Timer(props) {
         clearInterval(id);
       }
   
-    },[props.startCounting])
+    },[startCounting])
   
     const minutes = timeElapsed/60;
   
     return (
-            <>
+            <div className='timer'>
             <p>Time : {timeElapsed}</p>
             <p>WPM : {((correctWords/minutes) || 0).toFixed(0)}</p>
-            </>
+            </div>
             )
 }
 

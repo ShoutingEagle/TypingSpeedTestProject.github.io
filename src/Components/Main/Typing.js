@@ -5,7 +5,7 @@ import Word from './Word';
 
 
 
-const getCloud = () =>  `A Discipline Discipline is an essential part of human beings.`.split (" ").sort(() => Math.random() > 0.5 ? 1 : -1);
+const getCloud = () =>  `India is a land of various cultures and a rich heritage. It is the seventh-largest country by area and the second-most populous country globally. The peacock is India’s national bird, and the Bengal tiger is the country’s national animal. The national song is named Vande Matram (written by Bankimchandra Chatterji). The Indian national song was first performed at the Indian National Congress in 1896. ‘Jana Gana Mana,’ India’s national anthem, is sung in 52 seconds. The national flag of India is named Tiranga, which is made up of three colours: saffron, white, and green, with the Ashoka Chakra in navy blue in the centre.`.split (" ").sort(() => Math.random() > 0.5 ? 1 : -1);
 
 
 
@@ -17,6 +17,8 @@ function Typing() {
   const [correctWordArray,setCorrectWordArray] = useState([]);
   const [startCounting,setStartCounting] = useState(false);
   const cloud = useRef(getCloud());
+  const inputRef = useRef();
+  
 
   const processInput = (value) => {
 
@@ -41,50 +43,53 @@ function Typing() {
       }
 
       setActiveWordIndex(index => index+1);
-      console.log("activeWordIndex =>line 59 ",activeWordIndex)
-      
-      console.log("userInput =>line 61 ",userInput)
       
       setCorrectWordArray(data => {
         const word = value.trim()
-        console.log("word => line 65 ", word)
         const newResult = [...data]
-        console.log("newResult => line 67 ", newResult);
         newResult[activeWordIndex]= word === cloud.current[activeWordIndex]
         return newResult
       })
     }
     else{
-      console.log("userInput =>",userInput);
       setUserInput(value);
     }
   }
 
 
+  function clickFocus() {
+    inputRef.current.focus();
+  }
+
+
   return (
-    <div className="App">
-        <h1>Typing Test</h1>
-        <Timer 
+    <div className='container'>
+        <div className='main-container'><Timer 
         startCounting={startCounting}
         correctWords = {correctWordArray.filter(Boolean).length}
         />
         <p className='display'>{cloud.current.map((word,index) => {
-          console.log("word =>",word);
-          console.log("index =>",index);
-          console.log("index === activeWordIndex => ",index === activeWordIndex);
-          console.log("correctWordArray[index] => ",correctWordArray[index]);
-          return <Word
-                  text = {word}
-                  active={index === activeWordIndex} 
-                  correct = {correctWordArray[index]}
-                  />
-        })}</p>
-        
+          return (
+                <Word
+                text = {word}
+                active={index === activeWordIndex} 
+                correct = {correctWordArray[index]}
+                />
+                )                 
+        })}
+        </p>
+        </div>
+
+
+        <div>
         <input
+        ref={inputRef}
         type='text'
         value={userInput}
         onChange={(e) => processInput(e.target.value)}
         />
+        <button onClick={clickFocus} autoFocus className='reset-btn'>Start</button>
+        </div>
     </div>
   );
 }

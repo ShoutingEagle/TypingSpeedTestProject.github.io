@@ -52,12 +52,7 @@ body{
 
 /* Timer */
 
-.timer{
-    display: flex;
-    justify-content: space-between;
-    padding: 30px 30px 0 100px;
-    /* border: 1px solid salmon; */
-}
+
 
 .selector{
     margin: 5px;
@@ -97,14 +92,15 @@ body{
 }
 
 .reset-btn{
-    width: 30%;
-    height: 3rem;
+    width: 150px;
+    height: 35px;
     display: flex;
     gap: 10px;
     align-items: center;
     justify-content: center;
     border: none;
-    background: rgb(226, 226, 226);
+    background: rgb(17, 17, 17);
+    color: #f3f3f3;
     outline: none;
     cursor: pointer;
     font-size: 16px;
@@ -145,3 +141,74 @@ body{
 .range:active{
     transform: scale(0.80);
 }
+
+
+
+
+/* typing-component */
+
+
+.main-container{
+    margin-top: 100px;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+    /* border:5px solid #f70592; */
+}
+
+
+
+
+.correct{
+    color: rgb(13, 182, 13);
+}
+
+.incorrect{
+    color: red;
+}
+
+.active{
+    color: rgb(0, 162, 255);
+}
+
+
+
+.display{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-between;
+    align-items: center;
+    gap: 15px;
+    font-size: 18px;
+    text-align: justify;
+    background-color: #111111;
+    color: #f3f3f3;
+    padding: 30px;
+    width: 100%;
+    height:300px;
+    
+}
+
+.timer{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 30px ;
+    margin-bottom: 50px;
+    color: #f3f3f3;
+    font-size: 20px;
+    background-color: #0f0f0f;
+    border-radius: 8px;
+}
+
+
+input{
+  opacity: 0;
+  z-index: -999;
+  position: absolute;
+}
+
